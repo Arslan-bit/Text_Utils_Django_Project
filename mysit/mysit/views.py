@@ -1,77 +1,11 @@
 from django.http import HttpResponse
 from  django.shortcuts import render
 
-# Code for video ===========================6
-# def index(request):
-#     return HttpResponse( 'Hello')
-#
-# def about(request):
-#     return HttpResponse( 'about')
-#
-# def ex1(request):
-#     sites = ['''<h1>For Entertainment </h1><a href = "https://www.youtube.com" >youtube video</a>''',
-#              '''<h1>For Interaction </h1><a href = "https://www.facebook.com" >Facebook</a>''',
-#              '''<h1>For Insight   </h1><a href = "https://www.ted.com/talks" >Ted Talk</a>''',
-#              '''<h1>For Internship   </h1><a href="https://internshala.com" >Intenship</a>''',
-#              ]
-#     return HttpResponse((sites))
-
-# Code for video -----------------------------------7
-
-# def index(request):
-#     cool = {'name': 'Arslan','city': 'Lahore'}
-#     return render(request,'index.html',cool)
-#     # return HttpResponse("Home")
-#
-# def removepunc(request):
-#     return HttpResponse("remove punc")
-#
-# def capfirst(request):
-#     return HttpResponse("capitalize first")
-#
-# def newlineremove(request):
-#     return HttpResponse("capitalize first")
-#
-#
-# def spaceremove(request):
-#     return HttpResponse("space remover")
-#
-# def charcount(request):
-#     return HttpResponse("charcount ")
-#
-# Code------------------------------ for video 8
-
-# def index(request):
-#     cool = {'name': 'Arslan','city': 'Lahore'}
-#     return render(request,'index.html',cool)
-#     # return HttpResponse("Home")
-#
-# def removepunc(request):
-#     dgtext = request.GET.get('text', 'default')
-#     return HttpResponse("remove punc")
-#
-# def capfirst(request):
-#     return HttpResponse("capitalize first")
-#
-# def newlineremove(request):
-#     return HttpResponse("capitalize first")
-#
-#
-# def spaceremove(request):
-#     return HttpResponse("space remover")
-#
-# def charcount(request):
-#     return HttpResponse("charcount ")
-
-# Code------------------------------ for video 9
-
 def index(request):
     cool = {'name': 'Arslan','city': 'Lahore'}
     return render(request,'index.html',cool)
     # return HttpResponse("Home")
 
-
-# ----------------------------
 
 
 def analyze(request):
@@ -102,11 +36,9 @@ def analyze(request):
         analysed = ""
         for char in dgtext:
             analysed = analysed + str(char.upper())
-        # print(analysed)
-        # print('-----------------------------------------------')
+
         parms = {'purpose': 'Change Upper Case', 'analyzed_text': analysed}
         dgtext = analysed
-
 
 
     if extraspaceremover =='on':
@@ -119,6 +51,7 @@ def analyze(request):
 
         parms = {'purpose': 'Extra Space Remover', 'analyzed_text': analyzed}
         djtext = analyzed
+
 
     if (newlineremover == "on"):
         x = 'true'
